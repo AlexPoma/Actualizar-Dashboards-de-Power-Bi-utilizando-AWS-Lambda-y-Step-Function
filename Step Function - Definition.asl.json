@@ -1,0 +1,18 @@
+{
+    "Comment": "Run Power Automate",
+    "StartAt": "Run_Power_Automate",
+    "States": {
+        "Run_Power_Automate": {
+            "Type": "Task",
+            "Resource": "Lambda Function ARN",
+            "ResultPath": "$.Trigger_PowerAutomate",
+            "Parameters": {
+                "WorkSpace": "Dashboard",
+                "GroupId": "XXXXXX-XXXX-XXXX-XXXX-XXXXX",
+                "DashBoard": "Test PBI Update Lambda",
+                "DatasetId": "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX"
+            },
+            "End": true
+        }
+    }
+}
